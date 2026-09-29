@@ -1,0 +1,4 @@
+# upstream clone (punya repo git sendiri)
+edl/
+# binary besar, bisa ditarik ulang dari modem: adb pull /system/priv-app/MifiService.apk
+sms/MifiService.apk

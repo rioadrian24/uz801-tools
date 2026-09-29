@@ -1,0 +1,5 @@
+# Salin jadi /data/smsui/tg.conf (atau push dari PC), lalu isi:
+#   TG_BOT_TOKEN=123456:ABCDEF...   (dari @BotFather)
+#   TG_CHAT_ID=123456789            (dari @userinfobot)
+TG_BOT_TOKEN=
+TG_CHAT_ID=

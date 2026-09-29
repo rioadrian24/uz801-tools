@@ -1,0 +1,6 @@
+# skrip modem harus LF (CRLF merusak sh di firmware)
+*.sh text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.md text eol=lf
+*.example text eol=lf

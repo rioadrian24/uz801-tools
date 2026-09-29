@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SMS Inbox</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/layer.css" />
+<script src="./js/plugins/jquery.js" type="text/javascript"></script>
+<script src="./js/plugins/json2.js" type="text/javascript"></script>
+<script src="./js/plugins/layer.js" type="text/javascript"></script>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; color: #333; }
+  h2 { color: #4a77b4; border-bottom: 2px solid #8dc63f; padding-bottom: 6px; }
+  #toolbar { margin: 10px 0; }
+  button { background: #8dc63f; color: #fff; border: 0; padding: 6px 14px; margin-right: 8px; cursor: pointer; border-radius: 3px; }
+  button.gray { background: #999; }
+  table { border-collapse: collapse; width: 100%; margin-top: 12px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; font-size: 13px; }
+  th { background: #f2f7ec; }
+  tr.unread { background: #fffbe6; }
+  .msg { white-space: pre-wrap; word-break: break-word; }
+  .del { color: #c00; cursor: pointer; text-decoration: underline; }
+  #meta { color: #777; font-size: 12px; margin-top: 6px; }
+  #compose { display: none; margin-top: 18px; border: 1px solid #ddd; padding: 12px; background: #fafafa; }
+  #compose input[type=text] { width: 200px; }
+  #compose textarea { width: 60%; height: 70px; }
+  .lbl { display: inline-block; width: 80px; }
+</style>
+</head>
+<body>
+<h2>SMS Inbox</h2>
+<div id="toolbar">
+  <button onclick="refresh()">Refresh</button>
+  <button class="gray" onclick="toggleCompose()">Send SMS</button>
+  <span style="margin-left:12px"><label><input type="checkbox" id="autoref" checked> auto 10s</label></span>
+</div>
+<div id="meta">loading...</div>
+<table id="tbl">
+  <thead><tr><th style="width:40px">#</th><th style="width:140px">From</th><th style="width:150px">Date</th><th>Message</th><th style="width:60px">Del</th></tr></thead>
+  <tbody id="rows"><tr><td colspan="5">...</td></tr></tbody>
+</table>
+
+<div id="compose">
+  <h3>Send SMS</h3>
+  <div><span class="lbl">Number:</span><input type="text" id="c_num" placeholder="+628..."></div>
+  <div style="margin-top:6px"><span class="lbl">Message:</span><textarea id="c_text" placeholder="ASCII only"></textarea></div>
+  <div style="margin-top:8px"><button onclick="sendSms()">Send</button><button class="gray" onclick="toggleCompose()">Cancel</button></div>
+  <div id="c_status" style="margin-top:6px;color:#777"></div>
+</div>
+
+<script src="./js/sms.js" type="text/javascript"></script>
+</body>
+</html>
