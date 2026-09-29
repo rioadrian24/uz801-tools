@@ -1,4 +1,4 @@
-# UZ801 SMS Toolkit 📱
+# UZ801 SMS Toolkit 📱🇮🇩
 
 Add full SMS features to the **UZ801 V3.2** 4G modem (Qualcomm MSM8916)
 **without reflashing the firmware** — an SMS inbox appears in the modem's stock web
